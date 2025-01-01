@@ -7,7 +7,6 @@ public class Main {
         LexBank.oppenAcount("Modi");
         LexBank.oppenAcount("Saso");
         LexBank.oppenAcount("Lolo");
-
         // Print details of all accounts
         LexBank.printAccounts();
 
