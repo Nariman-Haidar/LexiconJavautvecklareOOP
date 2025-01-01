@@ -3,20 +3,25 @@ public class Main {
 
 
         // Create and open new accounts
-        LexBank.oppenAcount("Naro");
-        LexBank.oppenAcount("Modi");
-        LexBank.oppenAcount("Saso");
-        LexBank.oppenAcount("Lolo");
-        // Print details of all accounts
+        long account1 = LexBank.oppenAcount("NN");
+        long account2 = LexBank.oppenAcount("MM");
+
+        //LexBank.printAccounts();
+        // Perform deposit and withdraw operations on each account
+
+
+        LexBank.getAccount(account1).deposit(100);
+        LexBank.getAccount(account2).deposit(50);
         LexBank.printAccounts();
 
-        // Perform deposit and withdraw operations on each account
-        for (LexAccount account : LexBank.accounts) {
-            account.deposit(100);
-            account.withdraw(50);
-        }
 
+        // Test transfers between accounts
+        LexBank.accountTransfer(account1, account2, 50);
+        LexBank.accountTransfer(account1, account2, 200);
+        // Should fail
         // Print details of all accounts after transactions
         LexBank.printAccounts();
+
+
     }
 }

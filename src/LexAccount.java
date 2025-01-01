@@ -1,11 +1,13 @@
 public class LexAccount {
     private String name;
     private double balance;
+    private long accountNumber;
 
     // Constructor to initialize the account with a name and default balance
-    public LexAccount(String name){
+    public LexAccount(String name, long accountNumber){
         this.name = name;
-        this.balance = 2; // Default balance is set to 2
+        this.balance = balance; // Default balance is set to 2
+        this.accountNumber = accountNumber;
     }
 
     // Getter method for name
@@ -26,6 +28,11 @@ public class LexAccount {
     // Setter method for name
     public void setName(String name){
         this.name = name;
+    }
+
+    // Getter method for accountNumber
+    public long getAccountNumber(){
+        return accountNumber;
     }
 
     // Method to deposit an amount to the account
